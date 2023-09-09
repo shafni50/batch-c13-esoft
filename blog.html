@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Batch Blog</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        :root {
+            --dark-grayish-blue: hsl(228, 12%, 48%);
+            --black: #000;
+            --white: #fff;
+        } 
+
+        * {
+            box-sizing: border-box;
+        }
+        ::selection {
+          background-color: var(--black);
+          color: var(--white);
+        }
+        ul {
+            list-style-type: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        body {
+          background-color: var(--black);
+          font-family: 'Roboto', sans-serif;
+          padding: 10px;
+
+          --dot-bg: var(--white);
+          --dot-color: var(--black);
+          --dot-size: 1.5px;
+          --dot-space: 100px;
+          
+          background:
+              linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+              linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+              var(--dot-color);
+        }
+
+        /* layout */
+        .header {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+          background-image: url(images/circle-scatter-haikei.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 30px;
+          font-size: 40px;
+          text-align: center;
+        }
+        .leftcolumn {   
+          float: left;
+          width: 75%;
+        }
+        .rightcolumn {
+          text-align: center;
+          float: left;
+          width: 25%;
+          padding-left: 20px;
+        }
+
+        /* card */
+        .card {
+          border-radius: 10px;
+          background-color: var(--white);
+          padding: 20px;
+          margin-top: 20px;
+          font-weight: bold;
+        }
+        /* about me card */
+        .card-me {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .card .my-socials a {
+          color: var(--black);
+          font-weight: bold;
+          text-decoration: none !important;
+          font-size: 24px;
+          margin: 12px;
+        }
+        .card .my-socials a:hover {
+          color: var(--dark-grayish-blue);
+        }
+        /* each post, blog */
+        .blog-post {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+          cursor: pointer;
+        }
+        .card p {
+          color: var(--dark-grayish-blue);
+        }
+        .card img:hover {
+          opacity: 0.7;
+        }
+        .card a {
+          color: rgb(121, 202, 229);
+        }
+        .card a:hover {
+          text-decoration: none;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Footer */
+        footer {
+          margin-top: 3rem;
+          color: var(--black);
+          text-align: center;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          place-items: center;
+        }
+        footer img {
+          height: 45px;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+        }
+        footer .f-logo {
+          display: flex;
+          align-items: center;
+        }
+        footer .f-logo a {
+          text-decoration: none;
+          font-size: 20px;
+          color: var(--black);
+          text-transform: capitalize;
+        }
+        footer a:hover {
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: 800px) {
+          .leftcolumn, .rightcolumn {   
+              width: 100%;
+              padding: 0;
+          }
+        }
+        @media screen and (max-width: 375px){
+          .header {
+            font-size: 20px;
+          }
+          footer .f-logo a {
+            font-size: 16px;
+          }
+        }
+    </style>
+</head>
+<body> 
+<div class="header">
+  <h2>#BatchBlog</h2>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card blog-post">
+      <h1>Helping the children in need</h1>
+      <h5>Date: Aug 22, 2023</h5>
+      <img src="https://shorturl.at/yBY26" alt="Donation picture" height="auto"  width="100%" style="max-height: 500px;">
+      <p>
+        On August of 22<sup>nd</sup> 2023, we had the privilege of spreading joy and making a positive impact in the lives of children.
+        It was a heartwarming day when we extended our support and made a donation to benefit young minds in need.
+        This act of kindness not only touched our hearts but also served as a reminder of the importance of giving back to our community.
+        We believe in the power of compassion, and we look forward to continuing our efforts to make the world a better place, one small gesture at a time. <a href="">read more..</a>
+      </p>
+    </div>
+    <div class="card blog-post">
+      <h1>Annual awards ceremony</h1>
+      <h5>Date: March 4, 2024</h5>
+      <img src="https://shorturl.at/ACOS7" alt="Awards ceremony" width="100%" style="max-height: 500px;">
+      <p>
+        We wanted to let you know that our upcoming awards ceremony is set to take place on March of 4<sup>th</sup> 2024. 
+        While we won't be sending out invitations, we still wanted to share this exciting date with you. 
+        It's a day when we'll be honoring remarkable accomplishments and contributions within our community.
+        Feel free to mark your calendars if you'd like to stay in the loop about this significant event. <a href="">read more..</a>
+      </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>More blog posts will be updated soon! 🎉</h2>
+    </div>
+    <div class="card card-me">
+      <h2>About Me</h2>
+      <img src="images/trip-pic.jpg" alt="Image" height="120px" width="auto" style="border-radius: 45% 55% 42% 58% / 54% 32% 68% 46%;">
+      <p>
+        Hola! I am Safni Nazar. Currently a Software Engineer student at Esoft Metro Campus.
+        Being proud to build this site :)
+      </p>
+      <hr>
+      <h3>Follow Me, On</h3>
+      <div class="my-socials">
+        <a href="https://www.linkedin.com/in/safninazar/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/shafni50/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://github.com/shafni50" target="_blank" class="fa fa-github"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+    <div>
+      <div class="f-logo"><img src="images/esoft-logo-black.jpg" alt="Esoft Logo"><a href="index.html"><h2>batch c13</h2></a></div>
+      <p>© 2023 all rights reserved, coded by <a href="https://linktr.ee/shafni50" style="color: rgb(121, 202, 229);">safni-nazar</a></p>
+    </div>
+</footer>
+</body>
+</html>
